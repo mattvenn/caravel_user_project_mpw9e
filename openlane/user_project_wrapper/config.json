@@ -7,21 +7,21 @@
     "ROUTING_CORES": 1,
     "CLOCK_PERIOD": 25,
     "CLOCK_PORT": "wb_clk_i",
-    "CLOCK_NET": "mprj.clk",
-    "FP_PDN_MACRO_HOOKS": "mprj vccd1 vssd1 vccd1 vssd1",
+    "CLOCK_NET": "rgb_mixer.clk",
+    "FP_PDN_MACRO_HOOKS": "rgb_mixer vccd1 vssd1 vccd1 vssd1",
     "MACRO_PLACEMENT_CFG": "dir::macro.cfg",
     "MAGIC_DEF_LABELS": 0,
     "VERILOG_FILES_BLACKBOX": [
-        "dir::../../verilog/gl/user_proj_example.v"
+        "dir::../../verilog/gl/rgb_mixer.v"
     ],
-    "EXTRA_LEFS": "dir::../../lef/user_proj_example.lef",
-    "EXTRA_GDS_FILES": "dir::../../gds/user_proj_example.gds",
-    "EXTRA_LIBS": "dir::../../lib/user_proj_example.lib",
+    "EXTRA_LEFS": "dir::../../lef/rgb_mixer.lef",
+    "EXTRA_GDS_FILES": "dir::../../gds/rgb_mixer.gds",
+    "EXTRA_LIBS": "dir::../../lib/rgb_mixer.lib",
     "EXTRA_SPEFS": [
-        "user_proj_example", 
-        "dir::../../spef/multicorner/user_proj_example.min.spef", 
-        "dir::../../spef/multicorner/user_proj_example.nom.spef", 
-        "dir::../../spef/multicorner/user_proj_example.max.spef"
+        "rgb_mixer", 
+        "dir::../../spef/multicorner/rgb_mixer.min.spef", 
+        "dir::../../spef/multicorner/rgb_mixer.nom.spef", 
+        "dir::../../spef/multicorner/rgb_mixer.max.spef"
     ],
     "BASE_SDC_FILE": "dir::base_user_project_wrapper.sdc",
     "IO_SYNC": 0,

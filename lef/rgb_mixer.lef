@@ -1,0 +1,225 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO rgb_mixer
+  CLASS BLOCK ;
+  FOREIGN rgb_mixer ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 180.000 BY 210.000 ;
+  PIN clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 176.000 108.540 180.000 109.740 ;
+    END
+  END clk
+  PIN enc0_a
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 196.940 4.000 198.140 ;
+    END
+  END enc0_a
+  PIN enc0_b
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 176.000 159.540 180.000 160.740 ;
+    END
+  END enc0_b
+  PIN enc1_a
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 176.000 9.940 180.000 11.140 ;
+    END
+  END enc1_a
+  PIN enc1_b
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 83.670 206.000 84.230 210.000 ;
+    END
+  END enc1_b
+  PIN enc2_a
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.126000 ;
+    PORT
+      LAYER met2 ;
+        RECT -0.050 0.000 0.510 4.000 ;
+    END
+  END enc2_a
+  PIN enc2_b
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met2 ;
+        RECT 141.630 0.000 142.190 4.000 ;
+    END
+  END enc2_b
+  PIN io_oeb[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 45.030 0.000 45.590 4.000 ;
+    END
+  END io_oeb[0]
+  PIN io_oeb[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 131.970 206.000 132.530 210.000 ;
+    END
+  END io_oeb[1]
+  PIN io_oeb[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 47.340 4.000 48.540 ;
+    END
+  END io_oeb[2]
+  PIN io_oeb[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 98.340 4.000 99.540 ;
+    END
+  END io_oeb[3]
+  PIN pwm0_out
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met2 ;
+        RECT 177.050 206.000 177.610 210.000 ;
+    END
+  END pwm0_out
+  PIN pwm1_out
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met2 ;
+        RECT 93.330 0.000 93.890 4.000 ;
+    END
+  END pwm1_out
+  PIN pwm2_out
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 149.340 4.000 150.540 ;
+    END
+  END pwm2_out
+  PIN reset
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.159000 ;
+    PORT
+      LAYER met2 ;
+        RECT 35.370 206.000 35.930 210.000 ;
+    END
+  END reset
+  PIN sync
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met3 ;
+        RECT 176.000 57.540 180.000 58.740 ;
+    END
+  END sync
+  PIN vccd1
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 25.820 10.640 27.420 198.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 68.025 10.640 69.625 198.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 110.230 10.640 111.830 198.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 152.435 10.640 154.035 198.800 ;
+    END
+  END vccd1
+  PIN vssd1
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 46.920 10.640 48.520 198.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 89.125 10.640 90.725 198.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 131.330 10.640 132.930 198.800 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 173.535 10.640 175.135 198.800 ;
+    END
+  END vssd1
+  OBS
+      LAYER li1 ;
+        RECT 5.520 10.795 174.340 198.645 ;
+      LAYER met1 ;
+        RECT 0.070 10.640 177.490 198.800 ;
+      LAYER met2 ;
+        RECT 0.100 205.720 35.090 206.000 ;
+        RECT 36.210 205.720 83.390 206.000 ;
+        RECT 84.510 205.720 131.690 206.000 ;
+        RECT 132.810 205.720 176.770 206.000 ;
+        RECT 0.100 4.280 177.460 205.720 ;
+        RECT 0.790 4.000 44.750 4.280 ;
+        RECT 45.870 4.000 93.050 4.280 ;
+        RECT 94.170 4.000 141.350 4.280 ;
+        RECT 142.470 4.000 177.460 4.280 ;
+      LAYER met3 ;
+        RECT 4.000 198.540 176.330 198.725 ;
+        RECT 4.400 196.540 176.330 198.540 ;
+        RECT 4.000 161.140 176.330 196.540 ;
+        RECT 4.000 159.140 175.600 161.140 ;
+        RECT 4.000 150.940 176.330 159.140 ;
+        RECT 4.400 148.940 176.330 150.940 ;
+        RECT 4.000 110.140 176.330 148.940 ;
+        RECT 4.000 108.140 175.600 110.140 ;
+        RECT 4.000 99.940 176.330 108.140 ;
+        RECT 4.400 97.940 176.330 99.940 ;
+        RECT 4.000 59.140 176.330 97.940 ;
+        RECT 4.000 57.140 175.600 59.140 ;
+        RECT 4.000 48.940 176.330 57.140 ;
+        RECT 4.400 46.940 176.330 48.940 ;
+        RECT 4.000 11.540 176.330 46.940 ;
+        RECT 4.000 10.375 175.600 11.540 ;
+  END
+END rgb_mixer
+END LIBRARY
+

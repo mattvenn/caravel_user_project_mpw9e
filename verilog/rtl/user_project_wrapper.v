@@ -100,7 +100,8 @@ rgb_mixer rgb_mixer (
 	.pwm1_out(io_out[15]),
 	.pwm2_out(io_out[16]),
 	.sync(io_out[17]),
-	.io_oeb(io_oeb[17:14])
+	.io_oeb_low(io_oeb[17:14]), // outputs
+	.io_oeb_high(io_oeb[13:8]) // inputs
 	);
 
 endmodule	// user_project_wrapper

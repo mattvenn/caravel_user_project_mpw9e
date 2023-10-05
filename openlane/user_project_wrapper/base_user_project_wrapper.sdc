@@ -143,4 +143,4 @@ if { $::env(IO_SYNC) } {
 # Output loads
 set_load 0.19 [all_outputs]
 
-set_false_path -from la_data_in[0]
+#set_false_path -from la_data_in[0]

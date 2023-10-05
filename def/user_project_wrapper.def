@@ -7716,30 +7716,27 @@ NETS 637 ;
     - analog_io[9] ( PIN analog_io[9] ) + USE SIGNAL ;
     - io_in[0] ( PIN io_in[0] ) + USE SIGNAL ;
     - io_in[10] ( PIN io_in[10] ) ( rgb_mixer enc1_a ) + USE SIGNAL
-      + ROUTED met3 ( 239660 25500 0 ) ( 251620 * )
-      NEW met4 ( 251620 25500 ) ( * 2290580 )
-      NEW met3 ( 251620 2290580 ) ( 2917780 * 0 )
-      NEW met3 ( 251620 25500 ) M3M4_PR
-      NEW met3 ( 251620 2290580 ) M3M4_PR ;
+      + ROUTED met3 ( 2901220 2290580 ) ( 2917780 * 0 )
+      NEW met4 ( 2901220 79900 ) ( * 2290580 )
+      NEW met3 ( 239660 79900 0 ) ( 2901220 * )
+      NEW met3 ( 2901220 79900 ) M3M4_PR
+      NEW met3 ( 2901220 2290580 ) M3M4_PR ;
     - io_in[11] ( PIN io_in[11] ) ( rgb_mixer enc1_b ) + USE SIGNAL
-      + ROUTED met2 ( 143750 224740 0 ) ( * 2556460 )
-      NEW met3 ( 143750 2556460 ) ( 2917780 * 0 )
-      NEW met2 ( 143750 2556460 ) M2M3_PR ;
+      + ROUTED met2 ( 101890 224740 0 ) ( * 2556460 )
+      NEW met3 ( 101890 2556460 ) ( 2917780 * 0 )
+      NEW met2 ( 101890 2556460 ) M2M3_PR ;
     - io_in[12] ( PIN io_in[12] ) ( rgb_mixer enc2_a ) + USE SIGNAL
-      + ROUTED met3 ( 2901910 2821660 ) ( 2917780 * 0 )
-      NEW met2 ( 2901910 15300 ) ( * 2821660 )
-      NEW met3 ( 60490 15300 ) ( 2901910 * )
-      NEW met2 ( 2901910 15300 ) M2M3_PR
-      NEW met2 ( 2901910 2821660 ) M2M3_PR
-      NEW met2 ( 60490 15300 ) M2M3_PR_M ;
+      + ROUTED met4 ( 43700 158100 ) ( * 2821660 )
+      NEW met3 ( 43700 2821660 ) ( 2917780 * 0 )
+      NEW met3 ( 43700 158100 ) ( 60260 * 0 )
+      NEW met3 ( 43700 2821660 ) M3M4_PR
+      NEW met3 ( 43700 158100 ) M3M4_PR ;
     - io_in[13] ( PIN io_in[13] ) ( rgb_mixer enc2_b ) + USE SIGNAL
-      + ROUTED met2 ( 202170 6460 ) ( * 15300 0 )
-      NEW met3 ( 2901450 3087540 ) ( 2917780 * 0 )
-      NEW met2 ( 2901450 6460 ) ( * 3087540 )
-      NEW met3 ( 202170 6460 ) ( 2901450 * )
-      NEW met2 ( 202170 6460 ) M2M3_PR
-      NEW met2 ( 2901450 6460 ) M2M3_PR
-      NEW met2 ( 2901450 3087540 ) M2M3_PR ;
+      + ROUTED met4 ( 44620 86700 ) ( * 3087540 )
+      NEW met3 ( 44620 86700 ) ( 60260 * 0 )
+      NEW met3 ( 44620 3087540 ) ( 2917780 * 0 )
+      NEW met3 ( 44620 86700 ) M3M4_PR
+      NEW met3 ( 44620 3087540 ) M3M4_PR ;
     - io_in[14] ( PIN io_in[14] ) + USE SIGNAL ;
     - io_in[15] ( PIN io_in[15] ) + USE SIGNAL ;
     - io_in[16] ( PIN io_in[16] ) + USE SIGNAL ;
@@ -7772,53 +7769,76 @@ NETS 637 ;
     - io_in[6] ( PIN io_in[6] ) + USE SIGNAL ;
     - io_in[7] ( PIN io_in[7] ) + USE SIGNAL ;
     - io_in[8] ( PIN io_in[8] ) ( rgb_mixer enc0_a ) + USE SIGNAL
-      + ROUTED met4 ( 44620 212500 ) ( * 1759500 )
-      NEW met3 ( 44620 212500 ) ( 60260 * 0 )
-      NEW met3 ( 44620 1759500 ) ( 2917780 * 0 )
-      NEW met3 ( 44620 212500 ) M3M4_PR
-      NEW met3 ( 44620 1759500 ) M3M4_PR ;
+      + ROUTED met2 ( 134090 224740 0 ) ( * 1759500 )
+      NEW met3 ( 134090 1759500 ) ( 2917780 * 0 )
+      NEW met2 ( 134090 1759500 ) M2M3_PR ;
     - io_in[9] ( PIN io_in[9] ) ( rgb_mixer enc0_b ) + USE SIGNAL
-      + ROUTED met3 ( 239660 175100 0 ) ( 252540 * )
-      NEW met4 ( 252540 175100 ) ( * 2024700 )
-      NEW met3 ( 252540 2024700 ) ( 2917780 * 0 )
-      NEW met3 ( 252540 175100 ) M3M4_PR
-      NEW met3 ( 252540 2024700 ) M3M4_PR ;
+      + ROUTED met3 ( 2902140 2024700 ) ( 2917780 * 0 )
+      NEW met4 ( 2902140 188700 ) ( * 2024700 )
+      NEW met3 ( 239660 188700 0 ) ( 2902140 * )
+      NEW met3 ( 2902140 188700 ) M3M4_PR
+      NEW met3 ( 2902140 2024700 ) M3M4_PR ;
     - io_oeb[0] ( PIN io_oeb[0] ) + USE SIGNAL ;
-    - io_oeb[10] ( PIN io_oeb[10] ) + USE SIGNAL ;
-    - io_oeb[11] ( PIN io_oeb[11] ) + USE SIGNAL ;
-    - io_oeb[12] ( PIN io_oeb[12] ) + USE SIGNAL ;
-    - io_oeb[13] ( PIN io_oeb[13] ) + USE SIGNAL ;
-    - io_oeb[14] ( PIN io_oeb[14] ) ( rgb_mixer io_oeb[0] ) + USE SIGNAL
-      + ROUTED met2 ( 105570 5780 ) ( * 15300 0 )
-      NEW met2 ( 2722050 5780 ) ( * 3486020 )
-      NEW met3 ( 105570 5780 ) ( 2722050 * )
-      NEW met3 ( 2722050 3486020 ) ( 2917780 * 0 )
-      NEW met2 ( 105570 5780 ) M2M3_PR
-      NEW met2 ( 2722050 5780 ) M2M3_PR
-      NEW met2 ( 2722050 3486020 ) M2M3_PR ;
-    - io_oeb[15] ( PIN io_oeb[15] ) ( rgb_mixer io_oeb[1] ) + USE SIGNAL
+    - io_oeb[10] ( PIN io_oeb[10] ) ( rgb_mixer io_oeb_high[2] ) + USE SIGNAL
+      + ROUTED met3 ( 2901910 2423180 ) ( 2917780 * 0 )
+      NEW met2 ( 2901910 15300 ) ( * 2423180 )
+      NEW met3 ( 60490 15300 ) ( 2901910 * )
+      NEW met2 ( 2901910 15300 ) M2M3_PR
+      NEW met2 ( 2901910 2423180 ) M2M3_PR
+      NEW met2 ( 60490 15300 ) M2M3_PR_M ;
+    - io_oeb[11] ( PIN io_oeb[11] ) ( rgb_mixer io_oeb_high[3] ) + USE SIGNAL
+      + ROUTED met2 ( 237130 224740 0 ) ( * 2689060 )
+      NEW met3 ( 237130 2689060 ) ( 2917780 * 0 )
+      NEW met2 ( 237130 2689060 ) M2M3_PR ;
+    - io_oeb[12] ( PIN io_oeb[12] ) ( rgb_mixer io_oeb_high[4] ) + USE SIGNAL
+      + ROUTED met3 ( 2902370 2954940 ) ( 2917780 * 0 )
+      NEW met2 ( 2902370 6460 ) ( * 2954940 )
+      NEW met2 ( 92690 6460 ) ( * 15300 0 )
+      NEW met3 ( 92690 6460 ) ( 2902370 * )
+      NEW met2 ( 2902370 6460 ) M2M3_PR
+      NEW met2 ( 2902370 2954940 ) M2M3_PR
+      NEW met2 ( 92690 6460 ) M2M3_PR ;
+    - io_oeb[13] ( PIN io_oeb[13] ) ( rgb_mixer io_oeb_high[5] ) + USE SIGNAL
+      + ROUTED met2 ( 231150 3740 ) ( * 15300 0 )
+      NEW met2 ( 2722050 3740 ) ( * 3220140 )
+      NEW met3 ( 231150 3740 ) ( 2722050 * )
+      NEW met3 ( 2722050 3220140 ) ( 2917780 * 0 )
+      NEW met2 ( 231150 3740 ) M2M3_PR
+      NEW met2 ( 2722050 3740 ) M2M3_PR
+      NEW met2 ( 2722050 3220140 ) M2M3_PR ;
+    - io_oeb[14] ( PIN io_oeb[14] ) ( rgb_mixer io_oeb_low[0] ) + USE SIGNAL
+      + ROUTED met2 ( 128110 5780 ) ( * 15300 0 )
+      NEW met3 ( 2901450 3486020 ) ( 2917780 * 0 )
+      NEW met2 ( 2901450 5780 ) ( * 3486020 )
+      NEW met3 ( 128110 5780 ) ( 2901450 * )
+      NEW met2 ( 128110 5780 ) M2M3_PR
+      NEW met2 ( 2901450 5780 ) M2M3_PR
+      NEW met2 ( 2901450 3486020 ) M2M3_PR ;
+    - io_oeb[15] ( PIN io_oeb[15] ) ( rgb_mixer io_oeb_low[1] ) + USE SIGNAL
       + ROUTED met2 ( 2636030 3501660 ) ( * 3517980 0 )
-      NEW met3 ( 192050 3501660 ) ( 2636030 * )
-      NEW met2 ( 192050 224740 0 ) ( * 3501660 )
+      NEW met2 ( 48070 49300 ) ( * 3501660 )
+      NEW met3 ( 48070 3501660 ) ( 2636030 * )
+      NEW met3 ( 48070 49300 ) ( 60260 * 0 )
+      NEW met2 ( 48070 3501660 ) M2M3_PR
       NEW met2 ( 2636030 3501660 ) M2M3_PR
-      NEW met2 ( 192050 3501660 ) M2M3_PR ;
-    - io_oeb[16] ( PIN io_oeb[16] ) ( rgb_mixer io_oeb[2] ) + USE SIGNAL
-      + ROUTED met2 ( 48070 62900 ) ( * 3503020 )
-      NEW met2 ( 2311730 3503020 ) ( * 3517980 0 )
-      NEW met3 ( 48070 3503020 ) ( 2311730 * )
-      NEW met3 ( 48070 62900 ) ( 60260 * 0 )
-      NEW met2 ( 48070 3503020 ) M2M3_PR
-      NEW met2 ( 48070 62900 ) M2M3_PR
+      NEW met2 ( 48070 49300 ) M2M3_PR
+      NEW met3 ( 48070 3501660 ) RECT ( -570 -150 0 150 ) 
+      NEW met3 ( 48070 49300 ) RECT ( -570 -150 0 150 )  ;
+    - io_oeb[16] ( PIN io_oeb[16] ) ( rgb_mixer io_oeb_low[2] ) + USE SIGNAL
+      + ROUTED met2 ( 2311730 3503020 ) ( * 3517980 0 )
+      NEW met3 ( 252770 3503020 ) ( 2311730 * )
+      NEW met3 ( 239660 151300 0 ) ( 252770 * )
+      NEW met2 ( 252770 151300 ) ( * 3503020 )
+      NEW met2 ( 252770 3503020 ) M2M3_PR
       NEW met2 ( 2311730 3503020 ) M2M3_PR
-      NEW met3 ( 48070 3503020 ) RECT ( -570 -150 0 150 ) 
-      NEW met3 ( 48070 62900 ) RECT ( -570 -150 0 150 )  ;
-    - io_oeb[17] ( PIN io_oeb[17] ) ( rgb_mixer io_oeb[3] ) + USE SIGNAL
-      + ROUTED met2 ( 47610 113900 ) ( * 3503700 )
-      NEW met3 ( 47610 113900 ) ( 60260 * 0 )
+      NEW met2 ( 252770 151300 ) M2M3_PR ;
+    - io_oeb[17] ( PIN io_oeb[17] ) ( rgb_mixer io_oeb_low[3] ) + USE SIGNAL
+      + ROUTED met2 ( 47150 195500 ) ( * 3503700 )
+      NEW met3 ( 47150 195500 ) ( 60260 * 0 )
       NEW met2 ( 1987430 3503700 ) ( * 3517980 0 )
-      NEW met3 ( 47610 3503700 ) ( 1987430 * )
-      NEW met2 ( 47610 113900 ) M2M3_PR
-      NEW met2 ( 47610 3503700 ) M2M3_PR
+      NEW met3 ( 47150 3503700 ) ( 1987430 * )
+      NEW met2 ( 47150 195500 ) M2M3_PR
+      NEW met2 ( 47150 3503700 ) M2M3_PR
       NEW met2 ( 1987430 3503700 ) M2M3_PR ;
     - io_oeb[18] ( PIN io_oeb[18] ) + USE SIGNAL ;
     - io_oeb[19] ( PIN io_oeb[19] ) + USE SIGNAL ;
@@ -7847,39 +7867,51 @@ NETS 637 ;
     - io_oeb[5] ( PIN io_oeb[5] ) + USE SIGNAL ;
     - io_oeb[6] ( PIN io_oeb[6] ) + USE SIGNAL ;
     - io_oeb[7] ( PIN io_oeb[7] ) + USE SIGNAL ;
-    - io_oeb[8] ( PIN io_oeb[8] ) + USE SIGNAL ;
-    - io_oeb[9] ( PIN io_oeb[9] ) + USE SIGNAL ;
+    - io_oeb[8] ( PIN io_oeb[8] ) ( rgb_mixer io_oeb_high[0] ) + USE SIGNAL
+      + ROUTED met3 ( 239660 42500 0 ) ( 251620 * )
+      NEW met4 ( 251620 42500 ) ( * 1892100 )
+      NEW met3 ( 251620 1892100 ) ( 2917780 * 0 )
+      NEW met3 ( 251620 42500 ) M3M4_PR
+      NEW met3 ( 251620 1892100 ) M3M4_PR ;
+    - io_oeb[9] ( PIN io_oeb[9] ) ( rgb_mixer io_oeb_high[1] ) + USE SIGNAL
+      + ROUTED met2 ( 195730 5100 ) ( * 15300 0 )
+      NEW met3 ( 2903290 2157980 ) ( 2917780 * 0 )
+      NEW met2 ( 2903290 5100 ) ( * 2157980 )
+      NEW met3 ( 195730 5100 ) ( 2903290 * )
+      NEW met2 ( 195730 5100 ) M2M3_PR
+      NEW met2 ( 2903290 5100 ) M2M3_PR
+      NEW met2 ( 2903290 2157980 ) M2M3_PR ;
     - io_out[0] ( PIN io_out[0] ) + USE SIGNAL ;
     - io_out[10] ( PIN io_out[10] ) + USE SIGNAL ;
     - io_out[11] ( PIN io_out[11] ) + USE SIGNAL ;
     - io_out[12] ( PIN io_out[12] ) + USE SIGNAL ;
     - io_out[13] ( PIN io_out[13] ) + USE SIGNAL ;
     - io_out[14] ( PIN io_out[14] ) ( rgb_mixer pwm0_out ) + USE SIGNAL
-      + ROUTED met2 ( 237130 224740 0 ) ( * 3419380 )
-      NEW met3 ( 237130 3419380 ) ( 2917780 * 0 )
-      NEW met2 ( 237130 3419380 ) M2M3_PR ;
+      + ROUTED met3 ( 169510 3419380 ) ( 2917780 * 0 )
+      NEW met2 ( 169510 224740 0 ) ( * 3419380 )
+      NEW met2 ( 169510 3419380 ) M2M3_PR ;
     - io_out[15] ( PIN io_out[15] ) ( rgb_mixer pwm1_out ) + USE SIGNAL
-      + ROUTED met2 ( 2717450 5100 ) ( * 3517980 0 )
-      NEW met2 ( 153870 5100 ) ( * 15300 0 )
-      NEW met3 ( 153870 5100 ) ( 2717450 * )
-      NEW met2 ( 2717450 5100 ) M2M3_PR
-      NEW met2 ( 153870 5100 ) M2M3_PR ;
+      + ROUTED met2 ( 2717450 4420 ) ( * 3517980 0 )
+      NEW met2 ( 163530 4420 ) ( * 15300 0 )
+      NEW met3 ( 163530 4420 ) ( 2717450 * )
+      NEW met2 ( 2717450 4420 ) M2M3_PR
+      NEW met2 ( 163530 4420 ) M2M3_PR ;
     - io_out[16] ( PIN io_out[16] ) ( rgb_mixer pwm2_out ) + USE SIGNAL
-      + ROUTED met2 ( 47150 164900 ) ( * 3502340 )
+      + ROUTED met2 ( 47610 124100 ) ( * 3502340 )
+      NEW met3 ( 47610 124100 ) ( 60260 * 0 )
       NEW met2 ( 2392690 3502340 ) ( * 3517980 0 )
-      NEW met3 ( 47150 3502340 ) ( 2392690 * )
-      NEW met3 ( 47150 164900 ) ( 60260 * 0 )
-      NEW met2 ( 47150 3502340 ) M2M3_PR
-      NEW met2 ( 47150 164900 ) M2M3_PR
+      NEW met3 ( 47610 3502340 ) ( 2392690 * )
+      NEW met2 ( 47610 124100 ) M2M3_PR
+      NEW met2 ( 47610 3502340 ) M2M3_PR
       NEW met2 ( 2392690 3502340 ) M2M3_PR ;
     - io_out[17] ( PIN io_out[17] ) ( rgb_mixer sync ) + USE SIGNAL
       + ROUTED met2 ( 2068390 3504380 ) ( * 3517980 0 )
+      NEW met3 ( 239660 113900 0 ) ( 251850 * )
       NEW met3 ( 251850 3504380 ) ( 2068390 * )
-      NEW met3 ( 239660 73100 0 ) ( 251850 * )
-      NEW met2 ( 251850 73100 ) ( * 3504380 )
+      NEW met2 ( 251850 113900 ) ( * 3504380 )
       NEW met2 ( 2068390 3504380 ) M2M3_PR
-      NEW met2 ( 251850 3504380 ) M2M3_PR
-      NEW met2 ( 251850 73100 ) M2M3_PR ;
+      NEW met2 ( 251850 113900 ) M2M3_PR
+      NEW met2 ( 251850 3504380 ) M2M3_PR ;
     - io_out[18] ( PIN io_out[18] ) + USE SIGNAL ;
     - io_out[19] ( PIN io_out[19] ) + USE SIGNAL ;
     - io_out[1] ( PIN io_out[1] ) + USE SIGNAL ;
@@ -7910,15 +7942,15 @@ NETS 637 ;
     - io_out[8] ( PIN io_out[8] ) + USE SIGNAL ;
     - io_out[9] ( PIN io_out[9] ) + USE SIGNAL ;
     - la_data_in[0] ( PIN la_data_in[0] ) ( rgb_mixer reset ) + USE SIGNAL
-      + ROUTED met3 ( 95910 221340 ) ( 96140 * )
-      NEW met2 ( 629510 1700 0 ) ( * 17340 )
-      NEW met3 ( 96140 17340 ) ( 629510 * )
-      NEW met4 ( 96140 17340 ) ( * 221340 )
-      NEW met3 ( 96140 17340 ) M3M4_PR
-      NEW met3 ( 96140 221340 ) M3M4_PR
-      NEW met2 ( 95910 221340 ) M2M3_PR_M
-      NEW met2 ( 629510 17340 ) M2M3_PR
-      NEW met3 ( 96140 221340 ) RECT ( 0 -150 390 150 )  ;
+      + ROUTED met2 ( 66930 224740 0 ) ( * 235620 )
+      NEW met3 ( 66930 235620 ) ( 258750 * )
+      NEW met2 ( 629510 1700 0 ) ( * 16660 )
+      NEW met3 ( 258750 16660 ) ( 629510 * )
+      NEW met2 ( 258750 16660 ) ( * 235620 )
+      NEW met2 ( 66930 235620 ) M2M3_PR
+      NEW met2 ( 258750 16660 ) M2M3_PR
+      NEW met2 ( 258750 235620 ) M2M3_PR
+      NEW met2 ( 629510 16660 ) M2M3_PR ;
     - la_data_in[100] ( PIN la_data_in[100] ) + USE SIGNAL ;
     - la_data_in[101] ( PIN la_data_in[101] ) + USE SIGNAL ;
     - la_data_in[102] ( PIN la_data_in[102] ) + USE SIGNAL ;
@@ -8307,13 +8339,11 @@ NETS 637 ;
     - user_irq[1] ( PIN user_irq[1] ) + USE SIGNAL ;
     - user_irq[2] ( PIN user_irq[2] ) + USE SIGNAL ;
     - wb_clk_i ( PIN wb_clk_i ) ( rgb_mixer clk ) + USE CLOCK
-      + ROUTED met2 ( 2990 1700 0 ) ( * 16660 )
-      NEW met3 ( 2990 16660 ) ( 248630 * )
-      NEW met3 ( 239660 124100 0 ) ( 248630 * )
-      NEW met2 ( 248630 16660 ) ( * 124100 )
-      NEW met2 ( 2990 16660 ) M2M3_PR
-      NEW met2 ( 248630 16660 ) M2M3_PR
-      NEW met2 ( 248630 124100 ) M2M3_PR ;
+      + ROUTED met2 ( 204930 224740 0 ) ( * 234940 )
+      NEW met2 ( 2990 1700 0 ) ( * 234940 )
+      NEW met3 ( 2990 234940 ) ( 204930 * )
+      NEW met2 ( 2990 234940 ) M2M3_PR
+      NEW met2 ( 204930 234940 ) M2M3_PR ;
     - wb_rst_i ( PIN wb_rst_i ) + USE SIGNAL ;
     - wbs_ack_o ( PIN wbs_ack_o ) + USE SIGNAL ;
     - wbs_adr_i[0] ( PIN wbs_adr_i[0] ) + USE SIGNAL ;

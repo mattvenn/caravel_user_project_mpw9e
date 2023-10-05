@@ -10,10 +10,10 @@ MACRO rgb_mixer
   PIN clk
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.196500 ;
+    ANTENNAGATEAREA 0.852000 ;
     PORT
-      LAYER met3 ;
-        RECT 176.000 108.540 180.000 109.740 ;
+      LAYER met2 ;
+        RECT 144.850 206.000 145.410 210.000 ;
     END
   END clk
   PIN enc0_a
@@ -21,8 +21,8 @@ MACRO rgb_mixer
     USE SIGNAL ;
     ANTENNAGATEAREA 0.196500 ;
     PORT
-      LAYER met3 ;
-        RECT 0.000 196.940 4.000 198.140 ;
+      LAYER met2 ;
+        RECT 74.010 206.000 74.570 210.000 ;
     END
   END enc0_a
   PIN enc0_b
@@ -31,7 +31,7 @@ MACRO rgb_mixer
     ANTENNAGATEAREA 0.196500 ;
     PORT
       LAYER met3 ;
-        RECT 176.000 159.540 180.000 160.740 ;
+        RECT 176.000 173.140 180.000 174.340 ;
     END
   END enc0_b
   PIN enc1_a
@@ -40,7 +40,7 @@ MACRO rgb_mixer
     ANTENNAGATEAREA 0.196500 ;
     PORT
       LAYER met3 ;
-        RECT 176.000 9.940 180.000 11.140 ;
+        RECT 176.000 64.340 180.000 65.540 ;
     END
   END enc1_a
   PIN enc1_b
@@ -49,16 +49,16 @@ MACRO rgb_mixer
     ANTENNAGATEAREA 0.196500 ;
     PORT
       LAYER met2 ;
-        RECT 83.670 206.000 84.230 210.000 ;
+        RECT 41.810 206.000 42.370 210.000 ;
     END
   END enc1_b
   PIN enc2_a
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.126000 ;
+    ANTENNAGATEAREA 0.196500 ;
     PORT
-      LAYER met2 ;
-        RECT -0.050 0.000 0.510 4.000 ;
+      LAYER met3 ;
+        RECT 0.000 142.540 4.000 143.740 ;
     END
   END enc2_a
   PIN enc2_b
@@ -66,85 +66,133 @@ MACRO rgb_mixer
     USE SIGNAL ;
     ANTENNAGATEAREA 0.196500 ;
     PORT
-      LAYER met2 ;
-        RECT 141.630 0.000 142.190 4.000 ;
+      LAYER met3 ;
+        RECT 0.000 71.140 4.000 72.340 ;
     END
   END enc2_b
-  PIN io_oeb[0]
-    DIRECTION OUTPUT TRISTATE ;
-    USE SIGNAL ;
-    PORT
-      LAYER met2 ;
-        RECT 45.030 0.000 45.590 4.000 ;
-    END
-  END io_oeb[0]
-  PIN io_oeb[1]
-    DIRECTION OUTPUT TRISTATE ;
-    USE SIGNAL ;
-    PORT
-      LAYER met2 ;
-        RECT 131.970 206.000 132.530 210.000 ;
-    END
-  END io_oeb[1]
-  PIN io_oeb[2]
+  PIN io_oeb_high[0]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
     PORT
       LAYER met3 ;
-        RECT 0.000 47.340 4.000 48.540 ;
+        RECT 176.000 26.940 180.000 28.140 ;
     END
-  END io_oeb[2]
-  PIN io_oeb[3]
+  END io_oeb_high[0]
+  PIN io_oeb_high[1]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
     PORT
-      LAYER met3 ;
-        RECT 0.000 98.340 4.000 99.540 ;
+      LAYER met2 ;
+        RECT 135.190 0.000 135.750 4.000 ;
     END
-  END io_oeb[3]
-  PIN pwm0_out
+  END io_oeb_high[1]
+  PIN io_oeb_high[2]
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.795200 ;
+    PORT
+      LAYER met2 ;
+        RECT -0.050 0.000 0.510 4.000 ;
+    END
+  END io_oeb_high[2]
+  PIN io_oeb_high[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
     PORT
       LAYER met2 ;
         RECT 177.050 206.000 177.610 210.000 ;
+    END
+  END io_oeb_high[3]
+  PIN io_oeb_high[4]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 32.150 0.000 32.710 4.000 ;
+    END
+  END io_oeb_high[4]
+  PIN io_oeb_high[5]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 170.610 0.000 171.170 4.000 ;
+    END
+  END io_oeb_high[5]
+  PIN io_oeb_low[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 67.570 0.000 68.130 4.000 ;
+    END
+  END io_oeb_low[0]
+  PIN io_oeb_low[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 33.740 4.000 34.940 ;
+    END
+  END io_oeb_low[1]
+  PIN io_oeb_low[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 176.000 135.740 180.000 136.940 ;
+    END
+  END io_oeb_low[2]
+  PIN io_oeb_low[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 179.940 4.000 181.140 ;
+    END
+  END io_oeb_low[3]
+  PIN pwm0_out
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 2.673000 ;
+    PORT
+      LAYER met2 ;
+        RECT 109.430 206.000 109.990 210.000 ;
     END
   END pwm0_out
   PIN pwm1_out
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.795200 ;
+    ANTENNADIFFAREA 2.673000 ;
     PORT
       LAYER met2 ;
-        RECT 93.330 0.000 93.890 4.000 ;
+        RECT 102.990 0.000 103.550 4.000 ;
     END
   END pwm1_out
   PIN pwm2_out
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.795200 ;
+    ANTENNADIFFAREA 2.673000 ;
     PORT
       LAYER met3 ;
-        RECT 0.000 149.340 4.000 150.540 ;
+        RECT 0.000 108.540 4.000 109.740 ;
     END
   END pwm2_out
   PIN reset
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.159000 ;
+    ANTENNAGATEAREA 0.126000 ;
     PORT
       LAYER met2 ;
-        RECT 35.370 206.000 35.930 210.000 ;
+        RECT 6.390 206.000 6.950 210.000 ;
     END
   END reset
   PIN sync
     DIRECTION OUTPUT TRISTATE ;
     USE SIGNAL ;
-    ANTENNADIFFAREA 0.795200 ;
+    ANTENNADIFFAREA 2.673000 ;
     PORT
       LAYER met3 ;
-        RECT 176.000 57.540 180.000 58.740 ;
+        RECT 176.000 98.340 180.000 99.540 ;
     END
   END sync
   PIN vccd1
@@ -193,32 +241,41 @@ MACRO rgb_mixer
       LAYER met1 ;
         RECT 0.070 10.640 177.490 198.800 ;
       LAYER met2 ;
-        RECT 0.100 205.720 35.090 206.000 ;
-        RECT 36.210 205.720 83.390 206.000 ;
-        RECT 84.510 205.720 131.690 206.000 ;
-        RECT 132.810 205.720 176.770 206.000 ;
+        RECT 0.100 205.720 6.110 206.000 ;
+        RECT 7.230 205.720 41.530 206.000 ;
+        RECT 42.650 205.720 73.730 206.000 ;
+        RECT 74.850 205.720 109.150 206.000 ;
+        RECT 110.270 205.720 144.570 206.000 ;
+        RECT 145.690 205.720 176.770 206.000 ;
         RECT 0.100 4.280 177.460 205.720 ;
-        RECT 0.790 4.000 44.750 4.280 ;
-        RECT 45.870 4.000 93.050 4.280 ;
-        RECT 94.170 4.000 141.350 4.280 ;
-        RECT 142.470 4.000 177.460 4.280 ;
+        RECT 0.790 4.000 31.870 4.280 ;
+        RECT 32.990 4.000 67.290 4.280 ;
+        RECT 68.410 4.000 102.710 4.280 ;
+        RECT 103.830 4.000 134.910 4.280 ;
+        RECT 136.030 4.000 170.330 4.280 ;
+        RECT 171.450 4.000 177.460 4.280 ;
       LAYER met3 ;
-        RECT 4.000 198.540 176.330 198.725 ;
-        RECT 4.400 196.540 176.330 198.540 ;
-        RECT 4.000 161.140 176.330 196.540 ;
-        RECT 4.000 159.140 175.600 161.140 ;
-        RECT 4.000 150.940 176.330 159.140 ;
-        RECT 4.400 148.940 176.330 150.940 ;
-        RECT 4.000 110.140 176.330 148.940 ;
-        RECT 4.000 108.140 175.600 110.140 ;
-        RECT 4.000 99.940 176.330 108.140 ;
-        RECT 4.400 97.940 176.330 99.940 ;
-        RECT 4.000 59.140 176.330 97.940 ;
-        RECT 4.000 57.140 175.600 59.140 ;
-        RECT 4.000 48.940 176.330 57.140 ;
-        RECT 4.400 46.940 176.330 48.940 ;
-        RECT 4.000 11.540 176.330 46.940 ;
-        RECT 4.000 10.375 175.600 11.540 ;
+        RECT 3.990 181.540 176.100 198.725 ;
+        RECT 4.400 179.540 176.100 181.540 ;
+        RECT 3.990 174.740 176.100 179.540 ;
+        RECT 3.990 172.740 175.600 174.740 ;
+        RECT 3.990 144.140 176.100 172.740 ;
+        RECT 4.400 142.140 176.100 144.140 ;
+        RECT 3.990 137.340 176.100 142.140 ;
+        RECT 3.990 135.340 175.600 137.340 ;
+        RECT 3.990 110.140 176.100 135.340 ;
+        RECT 4.400 108.140 176.100 110.140 ;
+        RECT 3.990 99.940 176.100 108.140 ;
+        RECT 3.990 97.940 175.600 99.940 ;
+        RECT 3.990 72.740 176.100 97.940 ;
+        RECT 4.400 70.740 176.100 72.740 ;
+        RECT 3.990 65.940 176.100 70.740 ;
+        RECT 3.990 63.940 175.600 65.940 ;
+        RECT 3.990 35.340 176.100 63.940 ;
+        RECT 4.400 33.340 176.100 35.340 ;
+        RECT 3.990 28.540 176.100 33.340 ;
+        RECT 3.990 26.540 175.600 28.540 ;
+        RECT 3.990 10.715 176.100 26.540 ;
   END
 END rgb_mixer
 END LIBRARY

@@ -2,3 +2,4 @@ sim/
 *.log
 *.vcd 
 *.pyc
+__pycache__

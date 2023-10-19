@@ -6,7 +6,7 @@
     ],
     "ROUTING_CORES": 1,
     "CLOCK_PERIOD": 25,
-    "CLOCK_PORT": "wb_clk_i",
+    "CLOCK_PORT": "clk",
     "CLOCK_NET": "rgb_mixer.clk",
     "FP_PDN_MACRO_HOOKS": "rgb_mixer vccd1 vssd1 vccd1 vssd1",
     "MACRO_PLACEMENT_CFG": "dir::macro.cfg",

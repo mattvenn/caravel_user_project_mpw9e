@@ -82,7 +82,7 @@ module user_project_wrapper #(
 /* User project is instantiated  here   */
 /*--------------------------------------*/
 wb_buttons_leds wb_buttons_leds (
-    .wb_clk_i(wb_clk_i),
+    .wb_clk_i(wb_clk),
     .wb_rst_i(wb_rst_i),
 
     // MGMT SoC Wishbone Slave
